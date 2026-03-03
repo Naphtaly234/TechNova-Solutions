@@ -1,119 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNovaphy | Enterprise IT & Cybersecurity</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>TechNovaphy | Architectural IT & Cyber-Intelligence</title>
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode"> <nav class="navbar" id="navbar">
-        <div class="container nav-flex">
-            <a href="#" class="logo">TECH<span>NOVAPHY</span></a>
-            <ul class="nav-links">
-                <li><a href="#services">Solutions</a></li>
-                <li><a href="#process">Methodology</a></li>
-                <li><a href="#contact" class="nav-btn">Start Project</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">☀️</button>
+<body>
+    <div class="grain"></div>
+
+    <div id="custom-cursor"></div>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="logo-wrap">
+                <div class="logo-symbol"></div>
+                <a href="#" class="logo-text">TECH<span>NOVAPHY</span></a>
+            </div>
+            <div class="nav-items">
+                <a href="#solutions">Solutions</a>
+                <a href="#methodology">Methodology</a>
+                <div class="nav-divider"></div>
+                <a href="#contact" class="btn-minimal">Initiate Inquiry</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
-            <div class="hero-bg-glow"></div>
+        <section class="hero-elite">
+            <div class="mesh-gradient"></div>
             <div class="container">
-                <div class="status-pill"><span class="dot"></span> Network Secure & Active</div>
-                <h1 class="reveal-text">Infrastructure for the <br><span class="gradient-text">Next Digital Frontier.</span></h1>
-                <p class="hero-sub">Specialized in high-performance cloud architecture and cybersecurity defense for Kenyan enterprises.</p>
-                <div class="cta-wrap">
-                    <a href="#contact" class="mag-btn">Consult an Expert</a>
-                    <div class="trust-icons">
-                        <i class="fab fa-aws"></i>
-                        <i class="fab fa-react"></i>
-                        <i class="fab fa-python"></i>
-                        <i class="fab fa-docker"></i>
+                <div class="hero-content">
+                    <div class="badge-elite">
+                        <span class="pulse"></span>
+                        Nairobi HQ • Global Standards
+                    </div>
+                    <h1 class="clash-display">We Architect <span class="text-reveal">Unbreakable</span> Digital Systems.</h1>
+                    <p class="sub-text">From Tier-4 data center optimization to offensive cybersecurity maneuvers, we provide the technical edge for Kenya’s market leaders.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary-elite">Request Technical Audit</a>
+                        <a href="#portfolio" class="btn-secondary-elite">View Portfolio</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="section">
+        <section class="section" id="solutions">
             <div class="container">
-                <div class="bento-grid">
-                    <div class="bento-item large reveal">
-                        <div class="bento-inner">
-                            <i class="fas fa-shield-halved"></i>
-                            <h3>Elite Cyber Defense</h3>
-                            <p>Military-grade penetration testing and 24/7 threat monitoring.</p>
+                <div class="bento-grid-elite">
+                    <div class="bento-box tall reveal-up">
+                        <div class="box-header">
+                            <span class="icon-circle"><i class="fas fa-fingerprint"></i></span>
+                            <h3>Cyber-Intelligence</h3>
                         </div>
-                        <div class="bento-visual">
-                            <div class="radar"></div>
+                        <p>Zero-trust implementation and real-time threat telemetry.</p>
+                        <div class="visual-security">
+                            <div class="scanning-line"></div>
                         </div>
                     </div>
-                    <div class="bento-item reveal">
-                        <i class="fas fa-code"></i>
-                        <h3>Custom Dev</h3>
-                        <p>Scalable web & mobile ecosystems.</p>
-                    </div>
-                    <div class="bento-item reveal">
-                        <i class="fas fa-server"></i>
-                        <h3>Cloud Ops</h3>
-                        <p>High-uptime AWS migration.</p>
-                    </div>
-                    <div class="bento-item wide reveal">
-                        <div class="flex-content">
-                            <div>
-                                <h3>Managed IT Support</h3>
-                                <p>Proactive troubleshooting for modern offices.</p>
+
+                    <div class="bento-box wide reveal-up">
+                        <div class="box-flex">
+                            <div class="text">
+                                <h3>Engineered Software</h3>
+                                <p>Bespoke ERPs and automated logistics engines built for scale.</p>
                             </div>
-                            <div class="badge-247">24/7</div>
+                            <div class="tech-stack-mini">
+                                <span>React</span><span>Go</span><span>AWS</span>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="bento-box reveal-up">
+                        <h3>Infrastructure</h3>
+                        <p>High-availability cloud migrations.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/254799269573" class="wa-float" target="_blank">
+    <a href="https://wa.me/254799269573" class="wa-elite" aria-label="Chat">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-        // 1. Reveal-on-Scroll Observer
-        const reveal = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.15 });
-
-        document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
-
-        // 2. Magnetic Button Effect
-        const magBtn = document.querySelector('.mag-btn');
-        magBtn.addEventListener('mousemove', (e) => {
-            const pos = magBtn.getBoundingClientRect();
-            const x = e.pageX - pos.left - window.scrollX;
-            const y = e.pageY - pos.top - window.scrollY;
-            magBtn.style.setProperty('--x', x + 'px');
-            magBtn.style.setProperty('--y', y + 'px');
-        });
-
-        // 3. Navbar Adaptive Transparency
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            nav.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // 4. Smooth Theme Transition
-        const themeBtn = document.getElementById('theme-toggle');
-        themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            themeBtn.textContent = document.body.classList.contains('light-mode') ? "🌙" : "☀️";
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
