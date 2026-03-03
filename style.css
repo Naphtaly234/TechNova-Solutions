@@ -1,239 +1,102 @@
-/* =========================================
-   1. DESIGN TOKENS (PREMIUM PALETTE)
-   ========================================= */
+/* DESIGN SYSTEM */
 :root {
-    --primary: #0062ff;
-    --primary-dark: #004cc7;
-    --primary-glow: rgba(0, 98, 255, 0.15);
-    --whatsapp: #25d366;
-    
-    /* Light Mode */
-    --bg: #ffffff;
-    --bg-alt: #f8fafc;
-    --text: #020617;
-    --text-muted: #64748b;
-    --glass: rgba(255, 255, 255, 0.7);
-    --border: rgba(226, 232, 240, 0.8);
-    --card-bg: #ffffff;
-    --nav-height: 80px;
-    --shadow: 0 20px 40px -12px rgba(2, 6, 23, 0.1);
-    
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --primary: #00f2ff; /* Cyber Cyan */
+    --accent: #7000ff; /* Electric Purple */
+    --dark-bg: #030712;
+    --glass-white: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-body.dark {
-    --bg: #020617;
-    --bg-alt: #070e27;
-    --text: #f8fafc;
-    --text-muted: #94a3b8;
-    --glass: rgba(2, 6, 23, 0.7);
-    --border: rgba(30, 41, 59, 0.5);
-    --card-bg: #0f172a;
-    --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-}
-
-/* =========================================
-   2. RESET & BASE
-   ========================================= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-h1, h2, h3 {
+body.dark-theme {
+    background-color: var(--dark-bg);
+    color: #f8fafc;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
-    line-height: 1.2;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+/* BENTO GRID LOGIC */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 1.5rem;
+}
 
-.section { padding: 120px 0; }
-
-.light { background: var(--bg-alt); }
-
-/* =========================================
-   3. EXQUISITE NAVBAR
-   ========================================= */
-.navbar {
-    position: fixed;
-    top: 0; width: 100%; height: var(--nav-height);
-    z-index: 2000;
-    background: transparent;
+.bento-item {
+    background: var(--glass-white);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    border-radius: 32px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
 }
 
-.navbar.scrolled {
-    background: var(--glass);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--border);
-    height: 70px;
+.bento-item:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
 }
 
-.nav-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.bento-item.large { grid-column: span 2; grid-row: span 2; }
+.bento-item.wide { grid-column: span 2; }
 
-.logo { 
-    font-size: 1.5rem; font-weight: 800; color: var(--text); 
-    text-decoration: none; letter-spacing: -1px; 
-}
-.logo span { color: var(--primary); }
-
-.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-.nav-links a { 
-    text-decoration: none; color: var(--text); 
-    font-weight: 600; font-size: 0.95rem; transition: var(--transition); 
-}
-.nav-links a:hover { color: var(--primary); }
-
-.nav-cta {
-    background: var(--primary);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 10px;
+/* DYNAMIC HERO GLOW */
+.hero-glow {
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
 }
 
-/* =========================================
-   4. HERO & GRADIENTS
-   ========================================= */
-.hero {
-    padding: 180px 0 100px;
-    background: radial-gradient(circle at 80% 20%, var(--primary-glow), transparent 25%),
-                radial-gradient(circle at 10% 80%, var(--primary-glow), transparent 25%);
-}
-
-.text-gradient {
-    background: linear-gradient(90deg, var(--primary), #60a5fa);
+/* GRADIENT TEXT */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.badge {
-    background: var(--primary-glow);
-    color: var(--primary);
-    padding: 6px 16px;
+/* BTN GLOW EFFECT */
+.btn-glow {
+    position: relative;
+    padding: 1.2rem 2.5rem;
+    background: var(--primary);
+    color: #000;
+    font-weight: 800;
     border-radius: 100px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    text-decoration: none;
+    overflow: hidden;
     display: inline-block;
 }
 
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; }
-.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 650px; margin-bottom: 2.5rem; }
-
-/* =========================================
-   5. GLASS CARDS & INTERACTION
-   ========================================= */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 4rem;
+.btn-glow::after {
+    content: '';
+    position: absolute;
+    top: var(--y); left: var(--x);
+    width: 100px; height: 100px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-.card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 3rem;
-    border-radius: 24px;
-    transition: var(--transition);
-    box-shadow: var(--shadow);
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
-    box-shadow: 0 30px 60px -15px rgba(0, 98, 255, 0.15);
-}
-
-.icon-box {
-    width: 60px; height: 60px;
-    background: var(--primary-glow);
-    color: var(--primary);
-    border-radius: 16px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; margin-bottom: 1.5rem;
-}
-
-/* =========================================
-   6. CONTACT FORM (GLASSMORPHISM)
-   ========================================= */
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
-}
-
-.glass-card {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    padding: 3rem;
-    border-radius: 24px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%; padding: 1.2rem; margin-bottom: 1.5rem;
-    border-radius: 12px; border: 1px solid var(--border);
-    background: var(--bg); color: var(--text);
-    font-family: inherit; transition: var(--transition);
-}
-
-.contact-form input:focus {
-    outline: none; border-color: var(--primary);
-    box-shadow: 0 0 0 4px var(--primary-glow);
-}
-
-/* =========================================
-   7. EXQUISITE WHATSAPP BUTTON
-   ========================================= */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px; right: 30px;
-    background: var(--whatsapp);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 100px;
-    display: flex; align-items: center; gap: 12px;
-    text-decoration: none; font-weight: 700;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    z-index: 3000;
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
     transition: var(--transition);
 }
 
-.whatsapp-float:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* =========================================
-   8. RESPONSIVE DESIGN
-   ========================================= */
+/* RESPONSIVE */
 @media (max-width: 992px) {
-    .contact-wrapper { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute; top: 100%; left: 0; width: 100%;
-        background: var(--bg); padding: 2rem;
-        flex-direction: column; display: none;
-        border-bottom: 1px solid var(--border);
-    }
-    .nav-links.active { display: flex; }
-    
-    .whatsapp-float span { display: none; }
-    .whatsapp-float { padding: 15px; border-radius: 50%; }
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-item.large, .bento-item.wide { grid-column: span 1; }
 }
