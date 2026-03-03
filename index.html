@@ -4,302 +4,181 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Affordable IT Support & Cybersecurity in Nairobi | TechNovaphy Solutions</title>
-  <meta name="description" content="Nairobi-based IT support, custom software development, and cybersecurity services for small and growing businesses in Kenya and worldwide. Affordable professional solutions.">
+  <meta name="description" content="Nairobi-based IT support, custom software development, and cybersecurity services for small and growing businesses in Kenya and worldwide.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* CSS Fixes for smooth UX */
+    html { scroll-behavior: smooth; }
+    
+    /* Sticky Theme Toggle position fix */
+    .nav-flex { display: flex; align-items: center; justify-content: space-between; }
+    
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1000;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.05); }
+
+    /* Dark Mode Utility Class (Ensure your style.css uses .dark prefix for colors) */
+    body.dark { background-color: #1a1a1a; color: #f4f4f4; }
+    body.dark .light { background-color: #2d2d2d; }
+    body.dark .card { background-color: #333; color: white; border: 1px solid #444; }
+  </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="container nav-flex">
     <h1 class="logo">TNPS</h1>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#why">Why Choose Us</a></li>
-      <li><a href="#process">Our Process</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
   </div>
 </nav>
 
 <main>
 
-<!-- HERO -->
 <header class="hero" id="home">
   <div class="overlay"></div>
   <div class="hero-box">
     <h1>TechNovaphy Solutions</h1>
-    <h2>Reliable IT, Custom Software & Cybersecurity for Growing Businesses</h2>
+    <h2>Reliable IT, Custom Software & Cybersecurity</h2>
     <p>Based in Nairobi, serving Kenya and international clients.</p>
     <ul class="hero-benefits">
-      <li>🔒 <strong>Stay Secure</strong> — 24/7 automated threat monitoring & 1-hour incident response</li>
-      <li>⚡ <strong>Operate Smoothly</strong> — reduce downtime with professional IT support</li>
-      <li>🚀 <strong>Grow Efficiently</strong> — custom software & systems tailored to your business</li>
+      <li>🔒 <strong>Stay Secure</strong> — 24/7 automated monitoring</li>
+      <li>⚡ <strong>Operate Smoothly</strong> — 1-hour incident response</li>
+      <li>🚀 <strong>Grow Efficiently</strong> — Custom business systems</li>
     </ul>
-    <p><strong>Professional, dependable solutions without enterprise-level pricing.</strong></p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn primary">Request a Free Security Assessment</a>
+      <a href="#contact" class="btn primary">Free Security Assessment</a>
       <a href="#services" class="btn secondary">Explore Services</a>
-    </div>
-    <div class="trust-badges">
-      <span>🔒 24/7 Monitoring</span> | 
-      <span>🛡️ Automated Threat Detection</span> | 
-      <span>⚡ 1-Hour Response Guarantee</span>
     </div>
   </div>
 </header>
 
-<!-- SERVICES -->
 <section id="services" class="section">
   <div class="container">
     <h2 class="section-title">Our Services</h2>
     <div class="cards">
       <div class="card">
         <h3>IT Support</h3>
-        <p>Keep your business running smoothly with:</p>
         <ul>
-          <li>Remote and on-site technical support</li>
-          <li>System troubleshooting & downtime reduction</li>
-          <li>Email setup and configuration</li>
-          <li>Business hours and priority response support</li>
+          <li>Remote & on-site technical support</li>
+          <li>System troubleshooting</li>
+          <li>Email & Cloud configuration</li>
         </ul>
       </div>
       <div class="card">
         <h3>Software Development</h3>
-        <p>Custom solutions that improve efficiency and scale your operations:</p>
         <ul>
-          <li>Business process automation & dashboards</li>
-          <li>Custom websites & internal systems</li>
-          <li>Profit, loss, and performance tracking tools</li>
-          <li>User-friendly interfaces & mobile optimization</li>
+          <li>Business Automation & VB.NET Legacy Fixes</li>
+          <li>Custom Web Apps & Dashboards</li>
+          <li>Inventory & Revenue Tools</li>
         </ul>
       </div>
       <div class="card">
         <h3>Cybersecurity</h3>
-        <p>Protect your business from threats with:</p>
         <ul>
-          <li>24/7 automated threat monitoring</li>
-          <li>1-hour guaranteed incident response</li>
-          <li>Firewall & endpoint protection</li>
-          <li>Malware removal & full system recovery</li>
-          <li>Monthly security reports & actionable insights</li>
+          <li>24/7 Threat Detection</li>
+          <li>Malware Removal & Recovery</li>
+          <li>Firewall & Endpoint Protection</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section id="why" class="section light">
+<section id="pricing" class="section light">
   <div class="container">
-    <h2 class="section-title">Why Choose TechNovaphy Solutions</h2>
+    <h2 class="section-title">Affordable Pricing</h2>
     <div class="cards">
       <div class="card">
-        <h3>Fast Response Time</h3>
-        <p>We respond within 1 hour to minimize downtime and keep your operations running without delays.</p>
+        <h3>Starter Support</h3>
+        <h4>$80 / Mo</h4>
+        <p>Remote troubleshooting & Business hours support.</p>
       </div>
       <div class="card">
-        <h3>Tailored Solutions</h3>
-        <p>Every solution is customized to meet your unique business goals and growth plan.</p>
+        <h3>Growth Support</h3>
+        <h4>$150 / Mo</h4>
+        <p>Includes maintenance, security checks & priority response.</p>
       </div>
       <div class="card">
-        <h3>Security-First Approach</h3>
-        <p>Data protection and system reliability are integrated into every project we deliver.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OUR PROCESS -->
-<section id="process" class="section">
-  <div class="container">
-    <h2 class="section-title">Our Process</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>1. Consultation</h3>
-        <p>We analyze your current systems, identify risks, and understand your business needs.</p>
-      </div>
-      <div class="card">
-        <h3>2. Strategy & Planning</h3>
-        <p>Design a customized technology plan to meet business objectives while prioritizing security.</p>
-      </div>
-      <div class="card">
-        <h3>3. Implementation</h3>
-        <p>Deploy secure, scalable solutions with minimal disruption to daily operations.</p>
-      </div>
-      <div class="card">
-        <h3>4. Ongoing Support</h3>
-        <p>Continuous monitoring, updates, and support to ensure long-term reliability and safety.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio" class="section light">
-  <div class="container">
-    <h2 class="section-title">Our Portfolio</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Business Website</h3>
-        <p>Modern, responsive websites optimized for performance, SEO, and lead generation.</p>
-      </div>
-      <div class="card">
-        <h3>Inventory Management System</h3>
-        <p>Custom-built system for tracking products, sales, and generating actionable reports efficiently.</p>
-      </div>
-      <div class="card">
-        <h3>Network Security Upgrade</h3>
-        <p>Firewall implementation and endpoint protection to safeguard your business infrastructure.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="section">
-  <div class="container">
-    <h2 class="section-title">Affordable Pricing Plans</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      Transparent pricing for small and growing businesses. No hidden costs, full clarity on deliverables.
-    </p>
-    <div class="cards">
-      <div class="card">
-        <h3>IT Support - Starter</h3>
-        <h4>$80 / Month</h4>
-        <ul>
-          <li>Remote support & troubleshooting</li>
-          <li>Email setup assistance</li>
-          <li>Business hours support</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>IT Support - Growth</h3>
-        <h4>$150 / Month</h4>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Monthly system maintenance</li>
-          <li>Basic security checks</li>
-          <li>Priority response time</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Business Website</h3>
+        <h3>Custom Software</h3>
         <h4>From $300</h4>
-        <ul>
-          <li>5-page responsive website</li>
-          <li>Contact form integration</li>
-          <li>Basic SEO setup</li>
-          <li>Mobile optimization</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Cybersecurity - Growth Plan</h3>
-        <h4>$150 / Month</h4>
-        <ul>
-          <li>24/7 automated threat monitoring</li>
-          <li>1-hour guaranteed incident response</li>
-          <li>Firewall & endpoint protection</li>
-          <li>Malware removal & full system recovery</li>
-          <li>Monthly security report with actionable insights</li>
-        </ul>
+        <p>Tailored solutions for your specific business needs.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="section">
-  <div class="container">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="cards">
-      <div class="card">
-        <p>“TechNovaphy Solutions reduced our system downtime by 80% and protected us from multiple cyber threats. Highly professional and responsive team!”</p>
-        <h4>- Sir Daniel, Nairobi SME</h4>
-      </div>
-      <div class="card">
-        <p>“Our website and custom inventory system were delivered on time and helped streamline operations. Revenue tracking is now automated.”</p>
-        <h4>- Company Director, Retail Business</h4>
-      </div>
-      <div class="card">
-        <p>“Their cybersecurity solutions helped us secure our data effectively and respond to threats within 1 hour. We feel much safer running our operations.”</p>
-        <h4>- Dev Brian, Tech Startup</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section light">
-  <div class="container">
-    <h2 class="section-title">About TechNovaphy Solutions</h2>
-    <p>
-      TechNovaphy Solutions is a Nairobi-based technology company providing IT support, 
-      custom software development, and cybersecurity services to small and growing businesses 
-      in Kenya and worldwide. Our mission is to deliver reliable, scalable, and secure solutions 
-      that help businesses grow with confidence, all at affordable pricing.
-    </p>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="section">
-  <div class="container" style="text-align:center;">
-    <h2>Let’s Build and Secure Your Business Technology</h2>
-    <p>Schedule a free consultation today and discover how we can protect and optimize your operations locally or remotely.</p>
-    <a href="#contact" class="btn primary">Get Started</a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section light">
+<section id="contact" class="section">
   <div class="container">
     <h2 class="section-title">Contact Us</h2>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-      Ready to improve your business technology? Get a free consultation and let’s discuss how we can secure and optimize your operations.
-    </p>
     <form action="https://formspree.io/f/xzdajgyz" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+      <textarea name="message" placeholder="How can we help your business today?" rows="5" required></textarea>
       <button type="submit" class="btn primary">Send Message</button>
     </form>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:technovaphysolutions3@gmail.com">technovaphysolutions3@gmail.com</a></p>
-      <p>Phone: <a href="tel:+254799269573">+254 799 269 573</a></p>
-      <p>Location: Nairobi, Kenya (Serving Clients Worldwide)</p>
-    </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<a href="https://wa.me/254799269573?text=Hi%20TechNovaphy%2C%20I%20am%20interested%20in%20your%20services." class="whatsapp-float" target="_blank">
+  <span>Chat on WhatsApp</span>
+</a>
+
 <footer>
-  <div class="container">
-    <p>&copy; 2026 TechNovaphy Solutions. All rights reserved.</p>
+  <div class="container" style="text-align: center; padding: 20px;">
+    <p>&copy; 2026 TechNovaphy Solutions. Nairobi, Kenya.</p>
   </div>
 </footer>
 
-<!-- SCRIPTS -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  // 1. Check for saved theme preference
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark");
+    toggle.textContent = "☀️";
+  }
+
+  // 2. Toggle Theme Logic
   toggle.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
+    body.classList.toggle("dark");
+    const isDark = body.classList.contains("dark");
+    
+    // Save preference to localStorage
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    
+    // Update icon
+    toggle.textContent = isDark ? "☀️" : "🌙";
   });
 });
 </script>
 
 </body>
 </html>
-
-
-
-
