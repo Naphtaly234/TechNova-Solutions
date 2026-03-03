@@ -11,36 +11,30 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="reveal-container">
 
     <nav class="navbar">
         <div class="container nav-flex">
             <a href="#" class="logo">TN<span>PS</span></a>
-            
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#process">Our Process</a></li>
                 <li><a href="#contact" class="nav-cta">Get Started</a></li>
             </ul>
-
             <div class="nav-btns">
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
-                <div class="menu-icon" id="menu-icon">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <button id="theme-toggle" class="theme-btn">🌙</button>
+                <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </nav>
 
     <main>
         <section class="hero" id="home">
-            <div class="container hero-content">
+            <div class="container hero-content reveal">
                 <span class="badge">Innovation Meets Security</span>
                 <h1>Enterprise-Grade IT <br> <span class="text-gradient">Without the Enterprise Cost</span></h1>
                 <p>We provide the technical backbone for Nairobi's fastest-growing companies—from custom software builds to elite cybersecurity defense.</p>
-                
                 <div class="hero-buttons">
                     <a href="#contact" class="btn primary">Free Consultation <i class="fas fa-arrow-right"></i></a>
                     <a href="#services" class="btn secondary">View Expertise</a>
@@ -48,24 +42,41 @@
             </div>
         </section>
 
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="99">0</div><span class="suffix">%</span>
+                    <p>System Uptime</p>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="150">0</div><span class="suffix">+</span>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-item reveal">
+                    <div class="stat-number" data-target="24">0</div><span class="suffix">/7</span>
+                    <p>Threat Monitoring</p>
+                </div>
+            </div>
+        </section>
+
         <section id="services" class="section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <h2 class="section-title">Core Specializations</h2>
                     <p>Tailored solutions for complex technical challenges.</p>
                 </div>
                 <div class="cards-grid">
-                    <div class="card">
+                    <div class="card reveal">
                         <div class="icon-box"><i class="fas fa-headset"></i></div>
                         <h3>Managed IT Support</h3>
                         <p>Proactive maintenance and 24/7 troubleshooting for your entire team.</p>
                     </div>
-                    <div class="card">
+                    <div class="card reveal">
                         <div class="icon-box"><i class="fas fa-code"></i></div>
                         <h3>Custom Software</h3>
                         <p>High-performance web applications built to scale with your business needs.</p>
                     </div>
-                    <div class="card">
+                    <div class="card reveal">
                         <div class="icon-box"><i class="fas fa-shield-halved"></i></div>
                         <h3>Cybersecurity</h3>
                         <p>Military-grade encryption and threat monitoring to safeguard your data.</p>
@@ -74,47 +85,68 @@
             </div>
         </section>
 
-        <section id="contact" class="section light">
+        <section id="process" class="section light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">The Technovaphy Process</h2>
+                    <p>A transparent roadmap from first call to final deployment.</p>
+                </div>
+                
+                
+                
+                <div class="process-steps">
+                    <div class="step-card reveal">
+                        <span class="step-digit">01</span>
+                        <h3>Technical Audit</h3>
+                        <p>We analyze your existing infrastructure to find security holes and bottlenecks.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <span class="step-digit">02</span>
+                        <h3>Custom Strategy</h3>
+                        <p>A bespoke roadmap designed for your specific budget and scaling goals.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <span class="step-digit">03</span>
+                        <h3>Deployment</h3>
+                        <p>Expert implementation with zero downtime for your daily operations.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <span class="step-digit">04</span>
+                        <h3>24/7 Support</h3>
+                        <p>Ongoing optimization to keep your technology ahead of the curve.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
             <div class="container contact-wrapper">
-                <div class="contact-info">
-                    <h2 class="section-title">Let’s Talk Strategy</h2>
-                    <p>Have a project in mind? Our lead engineers respond to all inquiries within 1 business hour.</p>
-                    
+                <div class="contact-info reveal">
+                    <h2 class="section-title">Ready to Secure Your Future?</h2>
+                    <p>Send us a message and our lead engineer will reach out within 60 minutes.</p>
                     <div class="contact-methods">
                         <div class="method-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <span>Call Us</span>
-                                <strong>+254 799 269 573</strong>
-                            </div>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@technovaphy.com</span>
                         </div>
                         <div class="method-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <span>Email Us</span>
-                                <strong>info@technovaphy.com</strong>
-                            </div>
+                            <i class="fas fa-phone"></i>
+                            <span>+254 799 269 573</span>
                         </div>
                     </div>
                 </div>
 
-                <form action="https://formspree.io/f/xzdajgyz" method="POST" class="contact-form glass-card">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
-                    </div>
+                <form action="https://formspree.io/f/xzdajgyz" method="POST" class="contact-form glass-card reveal">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Describe your project" rows="4" required></textarea>
                     <button type="submit" class="btn primary full-width">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/254799269573" class="whatsapp-float" target="_blank" rel="noopener">
+    <a href="https://wa.me/254799269573" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
         <span>Chat with an Expert</span>
     </a>
@@ -124,39 +156,53 @@
             const toggle = document.getElementById("theme-toggle");
             const menuIcon = document.getElementById("menu-icon");
             const navLinks = document.getElementById("nav-links");
-            const body = document.body;
 
-            // 1. Theme Persistence Logic
-            const currentTheme = localStorage.getItem("theme") || "light";
-            if (currentTheme === "dark") body.classList.add("dark");
-            toggle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
-
+            // 1. Theme Logic
             toggle.addEventListener("click", () => {
-                body.classList.toggle("dark");
-                const isDark = body.classList.contains("dark");
-                localStorage.setItem("theme", isDark ? "dark" : "light");
-                toggle.textContent = isDark ? "☀️" : "🌙";
+                document.body.classList.toggle("dark");
+                toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
             });
 
-            // 2. Mobile Menu Toggle
-            menuIcon.addEventListener("click", () => {
-                navLinks.classList.toggle("active");
-                menuIcon.querySelector('i').classList.toggle('fa-bars');
-                menuIcon.querySelector('i').classList.toggle('fa-times');
-            });
+            // 2. Mobile Menu
+            menuIcon.addEventListener("click", () => navLinks.classList.toggle("active"));
 
-            // 3. Smooth Scroll Navbar Hide/Show
-            let lastScroll = 0;
-            window.addEventListener("scroll", () => {
-                const currentScroll = window.pageYOffset;
-                const navbar = document.querySelector(".navbar");
-                
-                if (currentScroll > 50) {
-                    navbar.classList.add("scrolled");
-                } else {
-                    navbar.classList.remove("scrolled");
-                }
-                lastScroll = currentScroll;
+            // 3. Scroll Reveal Logic
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Trigger counter if the entry is a stat
+                        if (entry.target.classList.contains('stat-item')) {
+                            startCounter(entry.target.querySelector('.stat-number'));
+                        }
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // 4. Counter Animation
+            function startCounter(el) {
+                if (el.classList.contains('counted')) return;
+                const target = +el.getAttribute('data-target');
+                const count = () => {
+                    const current = +el.innerText;
+                    const increment = target / 50;
+                    if (current < target) {
+                        el.innerText = Math.ceil(current + increment);
+                        setTimeout(count, 30);
+                    } else {
+                        el.innerText = target;
+                        el.classList.add('counted');
+                    }
+                };
+                count();
+            }
+
+            // 5. Navbar Color on Scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('.navbar');
+                nav.classList.toggle('scrolled', window.scrollY > 50);
             });
         });
     </script>
